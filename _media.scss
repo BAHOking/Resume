@@ -1,0 +1,181 @@
+@media (max-width: 765px) {
+    .contact {
+        &__img {
+            left: 500px;
+        }
+    }
+    .portfolio {
+        &__item-coming-soon-1 {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .contact {
+        &__img {
+            left: 465px;
+        }
+    }
+}
+
+@media (max-width: 686px) {
+    .contact {
+        &__img {
+            left: 440px;
+        }
+    }
+}
+
+@media (max-width: 674px) {
+    .contact {
+        &__img {
+            left: 420px;
+        }
+    }
+}
+
+@media (max-width: 644px) {
+    .contact {
+        &__img {
+            left: 400px;
+        }
+    }
+}
+
+@media (max-width: 615px) {
+    .contact {
+        &__img {
+            left: 380px;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .contact {
+        &__img {
+            left: 360px;
+        }
+    }
+    .portfolio .contact {
+        &__avatar {
+            display: none;
+        }
+        &__info-items {
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 0;
+        }
+        &__info-link::after {
+            display: none;
+        }
+    }
+    .portfolio {
+        &__items {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 100%;
+            height: 100%;
+            box-shadow: 4px 4px 6px #dad7d7;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        &__item:hover {
+            width: 100%;
+            height: 100%;
+            transition: all 0s;
+            border: 2px solid rgb(25, 0, 255);
+        }
+    }
+}
+
+@media (max-width: 572px) {
+    .contact {
+        &__img {
+            left: 345px;
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    .contact {
+        &__img {
+            left: 330px;
+        }
+    }
+}
+
+@media (max-width: 545px) {
+    .contact {
+        &__img {
+            display: none;
+        }
+        &__info-text {
+            text-decoration: underline;
+        }
+        &__desc {
+            text-align: center;
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width: 488px) {
+    .contact {
+        &__avatar {
+            width: 100px;
+            height: 100px;
+            top: 0;
+        }
+        &__first-name,
+        &__last-name {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 432px) {
+    .contact {
+        &__avatar {
+            display: none;
+        }
+        &__info-items {
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 0;
+        }
+        &__info-link::after {
+            display: none;
+        }
+    }
+    .portfolio {
+        &__title {
+            text-align: center;
+        }
+    }
+    .skills {
+        &__item-spot {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .education,
+    .skills,
+    .tools,
+    .interests {
+        &__title {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 331px) {
+    .contact {
+        &__first-name,
+        &__last-name {
+            font-size: 30px;
+        }
+    }
+}
