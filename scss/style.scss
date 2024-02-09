@@ -5,201 +5,225 @@
 @import "global";
 
 .contact {
+  position: relative;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__avatar {
+    width: 160px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
     position: relative;
-    &__inner {
-        display: flex;
-        justify-content: space-around;
+    top: -10px;
+  }
+  &__avatar:hover {
+    border: 1px solid rgb(25, 0, 255);
+  }
+  &__box {
+    margin-left: 10px;
+  }
+  &__first-name {
+    font-size: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+  }
+  &__last-name {
+    font-size: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    margin-left: 5px;
+    transition: all 0.3s;
+  }
+  &__info-items {
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  &__info-link {
+    color: #999;
+    font-weight: 300;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 1px;
+      left: -30px;
+      background-size: 20px 20px;
+      background-image: url(../images/github.svg);
     }
-    &__avatar {
-        width: 160px;
-        border-radius: 50%;
-        border: 1px solid rgb(0, 0, 0);
-        position: relative;
-        top: -10px;
+    &:hover::after {
+      border-radius: 15%;
+      background-color: rgb(25, 0, 255);
     }
-    &__avatar:hover {
-        border: 1px solid rgb(25, 0, 255);
-    }
-    &__box {
-        margin-left: 10px;
-    }
-    &__first-name {
-        font-size: 40px;
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #222222;
-    }
-    &__last-name {
-        font-size: 40px;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: #222222;
-        margin-left: 5px;
-        transition: all 0.3s;
-    }
-    &__info-items {
-        margin-top: 10px;
-        margin-left: 30px;
-    }
-    &__info-link {
-        color: #999;
-        font-weight: 300;
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            top: 1px;
-            left: -30px;
-            background-size: 20px 20px;
-            background-image: url(../images/github.svg);
-        }
-        &:hover::after {
-            border-radius: 15%;
-            background-color: rgb(25, 0, 255);
-        }
-    }
-    &__info-link--mail::after {
-        background-image: url(../images/mail.svg);
-        background-size: cover;
-    }
-    &__info-link--instagram::after {
-        background-image: url(../images/instagram.svg);
-        background-size: cover;
-    }
-    &__info-link--mail:hover::after {
-        border-radius: 15%;
-        background-color: rgb(25, 0, 255);
-    }
-    &__info-link--instagram:hover::after {
-        border-radius: 15%;
-        background-color: rgb(25, 0, 255);
-    }
-    &__info-text {
-        color: #000;
-    }
-    &__info-text:hover {
-        color: rgb(25, 0, 255);
-    }
-    &__img {
-        position: absolute;
-        width: 150px;
-        height: 120px;
-        top: 85px;
-        right: -20px;
-    }
-    &__desc {
-        display: inline-block;
-        margin-top: 35px;
-        margin-bottom: 35px;
-        width: 100%;
-        background-color: #999999;
-        font-size: 20px;
-        color: #000;
-    }
+  }
+  &__info-link--mail::after {
+    background-image: url(../images/mail.svg);
+    background-size: cover;
+  }
+  &__info-link--instagram::after {
+    background-image: url(../images/instagram.svg);
+    background-size: cover;
+  }
+  &__info-link--mail:hover::after {
+    border-radius: 15%;
+    background-color: rgb(25, 0, 255);
+  }
+  &__info-link--instagram:hover::after {
+    border-radius: 15%;
+    background-color: rgb(25, 0, 255);
+  }
+  &__info-text {
+    color: #000;
+  }
+  &__info-text:hover {
+    color: rgb(25, 0, 255);
+  }
+  &__img {
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    top: 85px;
+    right: -20px;
+  }
+  &__desc {
+    display: inline-block;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+    background-color: #999999;
+    font-size: 20px;
+    color: #000;
+  }
 }
+
 .portfolio {
-    margin-bottom: 10px;
-    height: auto;
-    &__title {
-        letter-spacing: 10px;
-        color: rgb(25, 0, 255);
-        font-weight: bold;
-        margin-bottom: 28px;
-    }
-    &__items {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    &__item {
-        width: 150px;
-        height: 150px;
-        box-shadow: 4px 4px 6px #dad7d7;
-        padding: 10px;
-        margin: 15px;
-        transition: all 0.3s;
-    }
-    &__item:hover {
-        border: 2px solid rgb(25, 0, 255);
-        transform: scale(1.4);
-    }
+  margin-bottom: 10px;
+  height: auto;
+  &__title {
+    letter-spacing: 10px;
+    color: rgb(25, 0, 255);
+    font-weight: bold;
+    margin-bottom: 28px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 150px;
+    height: 150px;
+    box-shadow: 4px 4px 6px #dad7d7;
+    padding: 10px;
+    margin: 15px;
+    transition: all 0.3s;
+  }
+
+  &__item:hover {
+    padding: 0;
+    border: 2px solid rgb(25, 0, 255);
+    transform: scale(1.4);
+  }
+
+  &__section_box {
+    width: 100%;
+  }
+
+  &__section_title {
+    font-weight: bold;
+    color: #000;
+  }
+
+  &__section_line {
+    width: 80%;
+
+    height: 1px;
+
+    margin-top: -6px;
+
+    background-color: rgb(25, 0, 255);
+    border-radius: 25px;
+  }
 }
+
 .education {
-    &__title {
-        letter-spacing: 10px;
-        color: rgb(25, 0, 255);
-        font-weight: bold;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 20px;
-        line-height: 23px;
-        font-size: 15px;
-    }
-    &__item-left-name,
-    &__item-right-name {
-        color: #000;
-    }
-    &__item-right {
-        text-align: right;
-    }
-    &__info-link {
-        color: #666;
-        font-weight: 300;
-    }
+  &__title {
+    letter-spacing: 10px;
+    color: rgb(25, 0, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    line-height: 23px;
+    font-size: 15px;
+  }
+  &__item-left-name,
+  &__item-right-name {
+    color: #000;
+  }
+  &__item-right {
+    text-align: right;
+  }
+  &__info-link {
+    color: #666;
+    font-weight: 300;
+  }
 }
 .skills {
-    margin-top: 10px;
-    &__title {
-        letter-spacing: 10px;
-        color: rgb(25, 0, 255);
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 5px;
-    }
-    &__item-name {
-        color: #000;
-    }
-    &__item-spot {
-        display: inline-table;
-        width: 21px;
-        height: 21px;
-        margin-left: 5px;
-        border-radius: 50%;
-        background-color: #666;
-    }
-    &__item-spot--blue {
-        background-color: rgb(25, 0, 255);
-    }
+  margin-top: 10px;
+  &__title {
+    letter-spacing: 10px;
+    color: rgb(25, 0, 255);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+  }
+  &__item-name {
+    color: #000;
+  }
+  &__item-spot {
+    display: inline-table;
+    width: 21px;
+    height: 21px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #666;
+  }
+  &__item-spot--blue {
+    background-color: rgb(25, 0, 255);
+  }
 }
 .tools {
-    margin-top: 15px;
-    &__title {
-        letter-spacing: 10px;
-        color: rgb(25, 0, 255);
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+  margin-top: 15px;
+  &__title {
+    letter-spacing: 10px;
+    color: rgb(25, 0, 255);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 }
 .interests {
-    margin-top: 15px;
-    &__title {
-        letter-spacing: 10px;
-        color: rgb(25, 0, 255);
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+  margin-top: 15px;
+  &__title {
+    letter-spacing: 10px;
+    color: rgb(25, 0, 255);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 }
 
 @import "media";
